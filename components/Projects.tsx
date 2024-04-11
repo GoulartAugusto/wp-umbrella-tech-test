@@ -6,12 +6,25 @@ import { Tag } from "./Tag";
 export function Projects() {
   const [projects, setProjects] = useState([]);
 
-  const getProjects = () => {
-    fetch("http://localhost:3000/api/projects").then((response) =>
+  // instad of chaining '.then()' method, the 'async/await' method is more concise and readable
+  {/*
+    const getProjects = () => {
+      fetch("http://localhost:3000/api/projects").then((response) =>
       response.json().then((data) => {
         setProjects(data);
       })
-    );
+      );
+    };
+*/}
+
+  const getProjects = async () => {
+    try {
+      const response = await fetch("http://localhost:3000/api/projects")
+      const data = await response.json()
+      setProjects(data)
+    } catch (error) {
+      console.error("Something went wrong fetching projects:", error)
+    }
   };
 
   useEffect(() => {
