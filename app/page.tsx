@@ -1,4 +1,7 @@
 import { Projects } from "components/Projects";
+import QueueSystem from "components/QueueSystem";
+
+// Add QueueSystem component to project as requested on README.md page
 
 export default function Home() {
   return (
@@ -7,6 +10,7 @@ export default function Home() {
         Welcome to <a href="https://nextjs.org">WP Umbrella</a>
       </h1>
       <Projects />
+      <QueueSystem />
     </div>
   );
 }

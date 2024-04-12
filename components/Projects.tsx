@@ -39,7 +39,7 @@ export function Projects() {
         <div className="rounded p-2 bg-white" key={project.id}>
           <div className="flex items-center gap-2">
             {project.tags.map((tag) => (
-              <Tag tag={tag} key={`${project.id}`} />
+              <Tag tag={tag} key={`${project.id}-${tag}`} />
             ))}
           </div>
           <p>

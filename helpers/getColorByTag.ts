@@ -11,9 +11,9 @@ export const getColorByTag = (tag: string) => {
     case "yellow":
       return "#F59E0B";
     default:
-      return "#6B7280"; // is the default color required on README.md
+      return "#6B7280"; // The default color required on README.md
   }
 };
 
-// At README.md we have a requirement that says if a tag does not match with the 3 tags 
+// At README.md have a requirement that says if a tag does not match with Blue, Red or Yellow
 // the default background color should be grey (#6B7280). So this feature is now implemented
